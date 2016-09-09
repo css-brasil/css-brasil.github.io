@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		All Animation CSS3 Brasil -
+
+
+			Criando um menu off canvas
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="publisher" href="https://plus.google.com/u/0/107923948578708069647/posts"/>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content=" Criando um menu off canvas" />
+	<meta property="og:description" content="Hoje é um dia especial, pois este é o primeiro de muitos exemplos &quot;shows&quot; que faremos utilizando apenas CSS3." />
+	<meta property="og:site_name" content="All Animation CSS3 Brasil" />
+	<meta name="twitter:title" content=" Criando um menu off canvas"/>
+	<meta name="twitter:site" content="@Clovissneto"/>
+	<meta name="twitter:domain" content="All Animation CSS3"/>
+	<meta name="description" content="Hoje é um dia especial, pois este é o primeiro de muitos exemplos &quot;shows&quot; que faremos utilizando apenas CSS3.">
+	<meta name="keywords" content="menu-off-canvas" />
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400|Indie+Flower|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script id="dsq-count-scr" src="//css-brasil.disqus.com/count.js" async></script>
+</head>
+<body>
+	<input type="checkbox" class="hide" id="navigation-action">
+	<a href="https://github.com/All-Animation-CSS3-Brasil/all-animation-css3-brasil.github.io">
+		<img class="github-fork-flag" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+	</a>
+<div class="bg-positive">
+	<nav>
+		<label for="navigation-action" id="menu-ico">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+		</label>
+	
+		<ul id="navigation-list">
+			<li><a href="/playground"><i class="fa fa-html5" aria-hidden="true"></i> Playground</a></li>
+			<li><a href="/articles"><i class="fa fa-css3" aria-hidden="true"></i> Artigos</a></li>
+			<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+		</ul>
+	</nav>
+	
+</div>
+
+<div id="content">
+	<header class="header-site-title">
+		<a href="/articles"><h2 class="page-title positive">Artigos</h2></a>
+		<h3 class="page-title smoth-dark">Criando um menu off canvas</h3>
+		<h1><a href="/" class="logo-ico"><img src="/images/css-brasil.png" class="static-logo" alt="CSS Brasil"></a></h1>
+	</header>
+
+	<section class="container-fluid post">
+		<header>
+			<p class="credits center-txt">Escrito em September 5, 2016</p>
+			<h3 class="post-description">Hoje é um dia especial, pois este é o primeiro de muitos exemplos &quot;shows&quot; que faremos utilizando apenas CSS3.</h3>
+		</header>
+
+		<article>
+			<figure class="wrapper">
+					<img src="/images/menu-wrapper.jpg" alt="Criando um menu off canvas">
+
+					<figcaption class="btn-row">
+						<a href="http://codepen.io/clovisneto/full/zrMOKZ/" class="btn positive">Exemplo</a>
+						<a href="http://codepen.io/clovisneto/pen/zrMOKZ" class="btn positive">Baixar código</a>
+					</figcaption>
+			</figure>
+
+			<p>Este é o nosso primeiro post técnico do CSS Brasil, e para começar, nada melhor que compartilhar a técnica utilizada para criar um menu off-canvas, utilizando apenas CSS &lt;3</p>
+<h2 id="funcionamento">Funcionamento</h2>
+<p>O funcionamento do menu é bem simples e consiste apenas em 3 camadas (apesar de ter utilizado apenas 2 no exemplo a cima :p)</p>
+<p><br></p>
+<ul>
+<li><span class="green">wrapper</span></li>
+<li><span class="green">navigation</span></li>
+<li><span class="green">canvas</span></li>
+</ul>
+<p><br></p>
+<p>O <span class="green">wrapper</span> será nossa view, que terá a largura do tamanho da nossa tela, a <span class="green">navegação</span> será o nosso menu que fica escondido no <span class="green">eixo X da tela</span> e o canvas será o conteúdo da nossa página.</p>
+<p class="citation">Como diria minha mãe, é pau pra dar em burro :)</p>
+
+<p>Iremos controlar o estado de aberto e fechado pelo css, utilizando o seletor <span class="green">:checked</span> e selecionando o irmão por meio do seletor de herança <span class="green">~</span> (til), e no html colocaremos um <span class="green">input type=&quot;checkbox&quot; id=&quot;menu&quot;</span> para fazer toda mágica acontecer :)</p>
+<p><br></p>
+<p>Agora a brincadeira vai começar a ficar boa, chega de teoria e mãos a obra que é hora de códificar.</p>
+<p><img src="/images/menu-gif.gif" alt="Menu Off Canvas com CSS"></p>
+<h2 id="estrutura">Estrutura</h2>
+<p>A estrutura é muiito simples, seguindo os conceitos explicados a cima, temos o seguinte código HTML:</p>
+<script src="https://gist.github.com/clovisdasilvaneto/0e9bfa72ed31edba723dd73472e14b6d.js"></script>
+
+<p>Note que temos dois <span class="green">label for=&quot;&quot;</span> no nosso trecho HTML. Eles servem para marcar ou desmarcar o checkbox que controla o estado de aberto / fechado do nosso menu.</p>
+<p>Esconderemos o checkbox colocando um <span class="green">display: none</span> e logo em seguida colocaremos um <span class="green">translate3d(-100%,0,0)</span>, no menu para ele fique escondido no canto esquerdo da tela, ex:</p>
+<script src="https://gist.github.com/clovisdasilvaneto/238aa51a573e978e012c4facdfef7c72.js"></script>
+
+<p>Agora precisamos verificar o estado de <span class="green">:checked</span> do menu, pois se ele estiver checado deslocaremos o nosso wrapper <span class="green">300px</span> para a direita, fazendo com que o menu off-canvas apareça:</p>
+<script src="https://gist.github.com/clovisdasilvaneto/5db3e4a93f2212291b5acd8dd78b744e.js"></script>
+
+<p>Colocaremos todos os links do menu com um <span class="green">opacity: 0</span> e  um <span class="green">transform: translate3d(0, 40px, 0)</span> para que eles apareçam de baixo para cima.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/a142aacd94c2daaf2f484cfeb61a1577.js"></script>
+
+<p>Como o número de links que temos não são dinâmicos, colocaremos um <span class="green">transition-delay</span> em cada um deles para que apareçam de um por um, deixando nossa animação mais sexy ;)</p>
+<p>Para finalizar capturamos o estado de <span class="green">:checked</span> do menu e mostramos nossos links setando a propriedade <span class="green">opacity: 1</span> e zeramos seu <span class="green">translate3d</span> para que os links apareçam já se movimentando.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/059cd2fbcd20100f425ea5fb59d4a1af.js"></script>
+
+<p>Caso você use algum pré-processador, aconselho usar <span class="green">for</span> para interagir com os indices dos links do menu.</p>
+<p class="citation">Dica: Sempre que você precise criar uma grande animação com css, deixe para aplicar as transições e animações no final do desenvolvimento, pois facilita bastante no controle dos elementos da tela.</p>
+
+<p>E assim chegamos a conclusão do nosso menu off-canvas e do nosso primeiro post técnico do CSS Brasil, até a próxima :D \o/</p>
+
+
+			<foorter class="post-comments">
+				<h4>{ Comentários }</h4>
+				<div id="disqus_thread"></div>
+				<script>
+
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+				/*
+				var disqus_config = function () {
+				    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				    var d = document, s = d.createElement('script');
+				    s.src = '//css-brasil.disqus.com/embed.js';
+				    s.setAttribute('data-timestamp', +new Date());
+				    (d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</foorter>
+		</article>
+	</section>
+</div>
+
+
+</body>
+</html>
