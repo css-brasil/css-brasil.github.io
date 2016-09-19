@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		CSS Brasil -
+
+
+			Como criar um efeito de GLITCH com CSS3
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="publisher" href="https://plus.google.com/u/0/107923948578708069647/posts"/>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content=" Como criar um efeito de GLITCH com CSS3" />
+	<meta property="og:description" content="Aprenda a criar um efeito de glitch apenas utilizando CSS3 com keyframes e algumas técnicas de clip" />
+	<meta property="og:site_name" content="CSS Brasil" />
+    <meta property="og:image" content="http://cssbrasil.org/images/css-brasil-logo.png" />
+	<meta name="twitter:title" content=" Como criar um efeito de GLITCH com CSS3"/>
+	<meta name="twitter:site" content="@Clovissneto"/>
+	<meta name="twitter:domain" content="CSS Brasil"/>
+	<meta name="twitter:image:src" content="http://cssbrasil.org/images/css-brasil-logo.png" />
+	<meta name="description" content="Aprenda a criar um efeito de glitch apenas utilizando CSS3 com keyframes e algumas técnicas de clip">
+	<meta name="keywords" content="glitch,css-clip,animações" />
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400|Indie+Flower|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-59584480-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hide" id="navigation-action">
+	<a href="https://github.com/css-brasil/css-brasil">
+		<img class="github-fork-flag" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+	</a><script id="dsq-count-scr" src="//css-brasil.disqus.com/count.js" async></script>
+
+<div class="bg-positive">
+	<nav>
+		<label for="navigation-action" id="menu-ico">
+			<span class="btn-icon"></span>
+		</label>
+	
+		<ul id="navigation-list">
+			<li><a href="/playground"><i class="fa fa-html5" aria-hidden="true"></i> Playground</a></li>
+			<li><a href="/articles"><i class="fa fa-css3" aria-hidden="true"></i> Artigos</a></li>
+			<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+		</ul>
+	</nav>
+	
+</div>
+
+<div id="content">
+	<header class="header-site-title">
+		<a href="/articles"><h2 class="page-title positive">Artigos</h2></a>
+		<h3 class="page-title smoth-dark">Como criar um efeito de GLITCH com CSS3</h3>
+		<h1><a href="/" class="logo-ico"><img src="/images/css-brasil.png" class="static-logo" alt="CSS Brasil"></a></h1>
+	</header>
+
+	<section class="container-fluid post">
+		<header>
+			<p class="credits center-txt">Escrito em September 19, 2016</p>
+			<h3 class="post-description">Aprenda a criar um efeito de glitch apenas utilizando CSS3 com keyframes e algumas técnicas de clip</h3>
+		</header>
+
+		<article>
+			<figure class="wrapper">
+					<img src="/images/brasil.png" alt="Como criar um efeito de GLITCH com CSS3">
+
+				<figcaption class="btn-row">
+						<a href="https://codepen.io/clovisneto/full/bwZoqb/" class="btn positive">Exemplo</a>
+				</figcaption>
+			</figure>
+
+			<p>Semana passada estava navegando pelo codepen e me deparei com alguns efeitos glitch, feitos em javascript, bastante interessante. Resolvi então desenvolver algo parecido mas que seja utilizando CSS3.</p>
+<figure class="center-txt">
+    <img src="/images/brasil-animado.gif" alt="Brasil in GLITCH CSS3">
+</figure>
+
+<p>O conceito é bem simples, iremos criar duas camadas de texto &#39;fakes&#39; e cortaremos dois pedaços do texto que sobrescrevem o texto original, como mostra a figura a seguir:</p>
+<figure class="center-txt">
+    <img src="/images/brasil-glitch-wireframe.jpg" alt="Brasil GLITCH Efect wireframe">
+    <figcaption class="legend"><em>Wireframe do nosso efeito</em></figcaption>
+</figure>
+
+<h2 id="m-os-a-obra-o-">Mãos a obra o/</h2>
+<p>A estrutura html é muito simples, só iremos precisar de um parágrafo e faremos os cortes com os pseudos elementos <span class="green">::before</span> e <span class="green">::after</span>.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/8921bb906361c85452bcfba17a0ff19b.js"></script>
+
+<p>Para obter o efeito a cima, deslocaremos as camadas para a direção que queremos distorcer o texto <span class="green">2px</span> negativos a esquerda e a direita dos seus respectivos filhos (<span class="green">::before</span> e <span class="green">::after</span>) utilizaremos a propriedade <span class="green">clip</span> para poder cortar os textos e animar a posição que o corte se encontra, obtendo o efeito de GLITCH desejado.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/71babafa6b1270845ead953f9e407077.js"></script>
+
+<p>Note que colocamos a cor de fundo para a mascara sobreponha o texto original. Seguindo esta base, conseguimos obter o seguinte estado:</p>
+<figure class="center-txt">
+    <img src="/images/brasil-inital-state.png" alt="Brasil GLITCH efect initial state">
+</figure>
+
+<p>Agora é só aplicar um delay em cada um dos cortes e animar as suas respectivas posições, com a propriedade <span class="green">clip: rect</span>.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/8d8ef874e08b1f5c7dd768e633671c52.js"></script>
+
+<p class="danger-note">
+    De acordo com o site da MDN, o recurso da propriedade <span class="yellow text-note">clip</span> está depreciado, mas você pode utilizar a propriedade <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path">clip path</a> como uma alternativa.
+</p>
+
+<p>O interessante desta técnica é que podemos obter efeitos diferenciados de GLITH, este é só um get started. Caso você queira aperfeiçoar um pouco mais, aconselho dar uma olhadinha nos exemplos fantásticos do <a href="http://codepen.io/search/pens/?q=GLITCH%20&amp;limit=all&amp;order=popularity&amp;depth=everything&amp;show_forks=false">codepen</a>.</p>
+
+
+			<foorter class="post-comments">
+				<h4>{ Comentários }</h4>
+				<div id="disqus_thread"></div>
+				<script>
+
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+				/*
+				var disqus_config = function () {
+				    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				    var d = document, s = d.createElement('script');
+				    s.src = '//css-brasil.disqus.com/embed.js';
+				    s.setAttribute('data-timestamp', +new Date());
+				    (d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</foorter>
+		</article>
+	</section>
+</div>
+
+
+</body>
+</html>
