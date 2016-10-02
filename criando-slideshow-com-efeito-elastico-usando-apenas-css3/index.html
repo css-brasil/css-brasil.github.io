@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		CSS Brasil -
+
+
+			Slideshow com efeito elástico usando apenas CSS3
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="publisher" href="https://plus.google.com/u/0/107923948578708069647/posts"/>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content=" Slideshow com efeito elástico usando apenas CSS3" />
+	<meta property="og:description" content="Baseado em um exemplo do Codrops, criamos este lindo slide sem nenhuma linha de javascript" />
+	<meta property="og:site_name" content="CSS Brasil" />
+    <meta property="og:image" content="http://cssbrasil.org/images/css-brasil-logo.png" />
+	<meta name="twitter:title" content=" Slideshow com efeito elástico usando apenas CSS3"/>
+	<meta name="twitter:site" content="@Clovissneto"/>
+	<meta name="twitter:domain" content="CSS Brasil"/>
+	<meta name="twitter:image:src" content="http://cssbrasil.org/images/css-brasil-logo.png" />
+	<meta name="description" content="Baseado em um exemplo do Codrops, criamos este lindo slide sem nenhuma linha de javascript">
+	<meta name="keywords" content="glitch,css-clip,animações" />
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400|Indie+Flower|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-59584480-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hide" id="navigation-action">
+	<a href="https://github.com/css-brasil/css-brasil">
+		<img class="github-fork-flag" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+	</a><script id="dsq-count-scr" src="//css-brasil.disqus.com/count.js" async></script>
+
+<div class="bg-positive">
+	<nav>
+		<label for="navigation-action" id="menu-ico">
+			<span class="btn-icon"></span>
+		</label>
+	
+		<ul id="navigation-list">
+			<li><a href="/playground"><i class="fa fa-html5" aria-hidden="true"></i> Playground</a></li>
+			<li><a href="/articles"><i class="fa fa-css3" aria-hidden="true"></i> Artigos</a></li>
+			<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+		</ul>
+	</nav>
+	
+</div>
+
+<div id="content">
+	<header class="header-site-title">
+		<a href="/articles"><h2 class="page-title positive">Artigos</h2></a>
+		<h3 class="page-title smoth-dark">Slideshow com efeito elástico usando apenas CSS3</h3>
+		<h1><a href="/" class="logo-ico"><img src="/images/css-brasil.png" class="static-logo" alt="CSS Brasil"></a></h1>
+	</header>
+
+	<section class="container-fluid post">
+		<header>
+			<p class="credits center-txt">Escrito em September 19, 2016</p>
+			<h3 class="post-description">Baseado em um exemplo do Codrops, criamos este lindo slide sem nenhuma linha de javascript</h3>
+		</header>
+
+		<article>
+			<figure class="wrapper">
+					<img src="/images/elastic-circle.jpg" alt="Slideshow com efeito elástico usando apenas CSS3">
+
+				<figcaption class="btn-row">
+						<a href="http://cssbrasil.org/examples/css-elastic-slide/" class="btn positive">Exemplo</a>
+				</figcaption>
+			</figure>
+
+			<p>Faaala galera! Hoje voltamos com mais um mega post do CSS Brasil, desta vez iremos conhecer algumas técnicas utilizadas para criar &quot;ações&quot; nos nossos componentes por meio do CSS \o/\o/</p>
+<p><br></p>
+<p>Como <a href="https://en.wikipedia.org/wiki/Proof_of_concept">POC</a>, desenvolvi um exemplo de slideshow elástico, onde toda a sua interação é controlada por meio do CSS =D</p>
+<p><br></p>
+<p><em>Let&#39;s Go!</em></p>
+<p><br></p>
+<figure class="center-txt">
+    <img src="/images/pure-css-elastic-slideshow.gif" alt="Slideshow com efeito de circo elástico usando apenas CSS3">
+</figure>
+
+<h3 id="conhecendo-nossos-amigos-span-class-green-checked-span-e-span-class-green-span-">Conhecendo nossos amigos: <span class="green">:checked</span> e <span class="green">~</span></h3>
+<p>Estes são uns dos seletores que eu mais gosto no CSS e quem me conhece sabe que eu falo bastante deles. Antes de partir para o código vamos dar uma olhada no conceito desses carinhas.</p>
+<p><br></p>
+<p>O seletor <span class="green">:checked</span> seleciona o elemento que está se encontra no estado checado, podemos utilizá-lo em input&#39;s do tipo checkbox ou radio, já o <span class="green">~</span> seleciona os próximos irmãos do elemento declarado antes do seletor. Ex: <span class="green">li:nth-child(2) ~ li</span> irá selecionar todos os <span class="green">&lt;li&gt;</span> posteriores ao segundo <span class="green">&lt;li&gt;</span> do documento que sejam filhos do mesmo pai, ou seja, que estejam dentro da mesma <span class="green">&lt;ul&gt;</span></p>
+<p><br></p>
+<p>Bem simples, não é? Mas é importante entender o que esses seletores fazem, porque será por meio deles que iremos controlar as animações do nosso slide.</p>
+<h3 id="estrutura-html">Estrutura HTML</h3>
+<p>Neste exemplo a nossa marcação HTML será um pouquinho mais longa do que as últimas que vimos nos post&#39;s anteriores, observe o código abaixo:</p>
+<script src="https://gist.github.com/clovisdasilvaneto/ab96de6a73000f59169cb488840257b6.js"></script>
+
+<p>Apesar de ser um pouco longa, esta estrutura é fundamental para que a troca dos slides funcione corretamente.Vamos analisar o código por partes.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/85a4a4041a8785eae08c7fddc72cad01.js"></script>
+
+<p>Os input&#39;s acima, serão responsáveis por controlar o estado de cada item do slide e no nosso CSS iremos ficar &quot;escutando&quot; o seu estado de &quot;<span class="green">:checked</span>&quot;, para exibir o item do slide que corresponde ao input checado.</p>
+<p class="citation">
+    Como queremos que apenas um item fique visível para o usuário, utilizaremos input&#39;s do <span class="green">type=&quot;radio&quot;</span>.
+</p>
+
+<script src="https://gist.github.com/clovisdasilvaneto/4b7f5e48ba2158805c4170bd32307687.js"></script>
+
+<p>Este é o trecho mais interessante do nosso HTML, eu ocultei as outras <span class="green">&lt;li&gt;</span> para o código não ficar muito extenso.</p>
+<p><br></p>
+<p>Basicamente as label&#39;s que estão fora da nossa tag <span class="green">&lt;figure&gt;</span> terão a função de passar o nosso slide, pois os radios ficarão ocultos. Note que no seu atributo <span class="green">for</span> colocamos o id de qual slide iremos exibir quando o usuário clicar no <span class="green">&lt;label&gt;</span>.</p>
+<p><br></p>
+<p>Dentro da nossa tag <span class="green">&lt;figure&gt;</span> temos um <span class="green">&lt;label&gt;</span> que será a nossa setinha que fica ao lado do circulo do slide.</p>
+<p><br></p>
+<p><em>Chega de marcação HTML e vamos para a melhor parte do post... CSS ♥ ❤ ❥ ❣ ❦ ❧</em></p>
+<p><br></p>
+<h3 id="css">CSS</h3>
+<p>A estilização é bem simples, vai da criatividade de cada um =D</p>
+<script src="https://gist.github.com/clovisdasilvaneto/e88a2131c586fbe4b177d0e21803dca5.js"></script>
+
+<p>Neste trecho a cima, é importante notar que colocamos um <span class="green">z-index: 1</span> nas nossas <span class="green">li</span> para que elas fiquem por baixo do slide visível e adicionamos um <span class="green">transform: translateX(300%)</span> na classe <span class="green">.slide-item</span>, logo todos os itens ficarão escondidos no canto direito da tela.</p>
+<p><br></p>
+<p>Seguindo a estilização acima, teremos algo parecido com isto:</p>
+<figure class="center-txt">
+    <img src="/images/developmenting-elastic-slide.png" alt="developmenting elastic slide">
+</figure>
+
+<p>Agora só precisamos exibir o item referente ao input que está checado... Conseguimos capturar este estado por meio do seletor <span class="green">:checked</span></p>
+<script src="https://gist.github.com/clovisdasilvaneto/085d0f49f11286b52643312a1589db7d.js"></script>
+
+<p>Note que estamos usando os dois seletores que vimos no inicio do post, <span class="green">#slide-1:checked ~ ul li:nth-of-type(1)</span> desta forma conseguimos selecionar o primeiro <span class="green">&lt;li&gt;</span> que é filho da <span class="green">&lt;ul&gt;</span> que é irmão do <span class="green">&lt;input id=&quot;slide-1&quot;&gt;</span>. Em seguida zeramos o <span class="green">translateX</span> do nosso <span class="green">.slide-item</span> e o colocamos com um <span class="green">visibility: visible</span>.</p>
+<p class="citation">
+    O mesmo é feito para os outros <span class="green">&lt;li&gt;</span>, apenas mudamos o <span class="green">id</span> do <span class="green">input</span> checado e o indice dentro da propriedade <span class="green">li:nth-child(1)</span>... ex: <span class="green">#slide-2:checked ~ ul li:nth-of-type(2)</span>
+</p>
+
+<p>Como temos um <span class="green">transition</span> aplicado no <span class="green">.slide-item</span>, ele aparecerá se deslocando levemente para a esquerda =D
+<br>
+Falta exibir as legendas, mas como já sabemos capturar o <span class="green">&lt;li&gt;</span> referente ao input checado, não teremos nenhum problema nesta tarefa.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/2c96064b6276f87d8c955b6c8d19a75e.js"></script>
+
+<p>Já estamos na reta final do slide (uhuuu), agora iremos criar as animações das nossas bolinhas laterais, o que é bem simples, usaremos um <span class="green">scale()</span> e nada mais:</p>
+<script src="https://gist.github.com/clovisdasilvaneto/d0ac26694c9d1c7bd1ba1ab9b2ad40eb.js"></script>
+
+<p>Para finalizar adicionaremos as animações nas bolinhas, apenas quando o item estiver visível, como fizemos anteriormente:</p>
+<script src="https://gist.github.com/clovisdasilvaneto/21acdf6e036e3104abc24aafc76304c7.js"></script>
+
+<p><em>E voalá, concluímos nosso slide elástico \o/\o/\o/</em></p>
+<p><br></p>
+<p>É muito importante entender os conceitos destas técnicas CSS e treinar bastante, pois por meio delas podemos fazer coisas incríveis!</p>
+<p><br></p>
+<p><em>Um abraço e até a próxima!</em></p>
+
+
+			<foorter class="post-comments">
+				<h4>{ Comentários }</h4>
+				<div id="disqus_thread"></div>
+				<script>
+
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+				/*
+				var disqus_config = function () {
+				    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				    var d = document, s = d.createElement('script');
+				    s.src = '//css-brasil.disqus.com/embed.js';
+				    s.setAttribute('data-timestamp', +new Date());
+				    (d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</foorter>
+		</article>
+	</section>
+</div>
+
+
+</body>
+</html>
