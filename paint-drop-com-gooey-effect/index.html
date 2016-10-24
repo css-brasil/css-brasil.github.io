@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		CSS Brasil -
+
+
+			Paint Drop com Gooey Effect
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="publisher" href="https://plus.google.com/u/0/107923948578708069647/posts"/>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content=" Paint Drop com Gooey Effect" />
+	<meta property="og:description" content="Uma maneira diferente de se utilizar o Gooey Effect de maneira interativa e bonita." />
+	<meta property="og:site_name" content="CSS Brasil" />
+    <meta property="og:image" content="http://cssbrasil.org/images/css-brasil-logo.png" />
+	<meta name="twitter:title" content=" Paint Drop com Gooey Effect"/>
+	<meta name="twitter:site" content="@Clovissneto"/>
+	<meta name="twitter:domain" content="CSS Brasil"/>
+	<meta name="twitter:image:src" content="http://cssbrasil.org/images/css-brasil-logo.png" />
+	<meta name="description" content="Uma maneira diferente de se utilizar o Gooey Effect de maneira interativa e bonita.">
+	<meta name="keywords" content="Gooey,SVG-Filters,Paint-Drop" />
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400|Indie+Flower|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-59584480-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hide" id="navigation-action">
+	<a href="https://github.com/css-brasil/css-brasil">
+		<img class="github-fork-flag" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+	</a><script id="dsq-count-scr" src="//css-brasil.disqus.com/count.js" async></script>
+
+<div class="bg-positive">
+	<nav>
+		<label for="navigation-action" id="menu-ico">
+			<span class="btn-icon"></span>
+		</label>
+	
+		<ul id="navigation-list">
+			<li><a href="/playground"><i class="fa fa-html5" aria-hidden="true"></i> Playground</a></li>
+			<li><a href="/articles"><i class="fa fa-css3" aria-hidden="true"></i> Artigos</a></li>
+			<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+		</ul>
+	</nav>
+	
+</div>
+
+<div id="content">
+	<header class="header-site-title">
+		<a href="/articles"><h2 class="page-title positive">Artigos</h2></a>
+		<h3 class="page-title smoth-dark">Paint Drop com Gooey Effect</h3>
+		<h1><a href="/" class="logo-ico"><img src="/images/css-brasil.png" class="static-logo" alt="CSS Brasil"></a></h1>
+	</header>
+
+	<section class="container-fluid post">
+		<header>
+			<p class="credits center-txt">Escrito em October 21, 2016</p>
+			<h3 class="post-description">Uma maneira diferente de se utilizar o Gooey Effect de maneira interativa e bonita.</h3>
+		</header>
+
+		<article>
+			<figure class="wrapper">
+					<img src="/images/paint-drop.png" alt="Paint Drop com Gooey Effect">
+
+				<figcaption class="btn-row">
+						<a href="http://jeffersonmourak.me/" class="btn positive">Exemplo</a>
+				</figcaption>
+			</figure>
+
+			<p>Recentemente estava lendo um artigo no CSS Tricks sobre um efeito criado pelo brasileiro Lucas Bebber chamado <em>Gooey Effect</em> no qual se utiliza um SVG filter para fazer parecer que os elementos que estão mais perto uns dos outros estão grudados. (<a href="https://css-tricks.com/gooey-effect/">https://css-tricks.com/gooey-effect/</a>) , e isso me deu uma inspiração para criar um outro efeito com base no <em>Gooey</em>.</p>
+<p>A ideia desse efeito é criar a intenção de que está caindo um balde de tinta em seu site.</p>
+<h2 id="estrutura">Estrutura</h2>
+<p>Para se criar o efeito, você precisa criar uma pequena estrutura de elementos, é bem simples.
+<br>
+<br></p>
+<pre><code>.wrapper
+    ├── .column
+    └── .content
+</code></pre><p><br>
+<br></p>
+<p>O <code>.wrapper</code> é o elemento no qual será adicionado o efeito principal.
+Note que a class tem white-space: nowrap e overflow-x: hidden, pra que o não exista espaços indevidos entre as colunas e também não apareça uma coluna extra caso a largura do seu elemento seja inferior ao das colunas.
+<br>
+<br></p>
+<p><p data-height="265" data-theme-id="dark" data-slug-hash="pEGddP" data-default-tab="css,result" data-user="jeffersonmourak" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/jeffersonmourak/pen/pEGddP/">Gooey Effect wrapper</a> by Jefferson Moura (<a href="http://codepen.io/jeffersonmourak">@jeffersonmourak</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<br />
+<br /></p>
+<p><p>O <code>.content</code> é o elemento que você adiciona caso queira ter algum conteúdo dentro do efeito, e assim você pode ter por exemplo o nome da sua aplicação ou a logo da sua empresa, fica ao seu critério as informações contidas no Content.</p>
+<br /></p>
+<p><p>Basicamente é um quadrado com a mesma cor das colunas.</p>
+<br />
+<br /></p>
+<p><p data-height="265" data-theme-id="dark" data-slug-hash="yakPpX" data-default-tab="css,result" data-user="jeffersonmourak" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/jeffersonmourak/pen/yakPpX/">Gooey Effect content</a> by Jefferson Moura (<a href="http://codepen.io/jeffersonmourak">@jeffersonmourak</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<br />
+<br />
+As <code>.column</code> São os elementos que irão fazer as linhas da tinta, e assim ficar algo mais &quot;realista&quot;. Elas são divs com tamanho variado e com as bordas inferiores arredondadas.
+<br />
+<br /></p>
+<p><p data-height="265" data-theme-id="dark" data-slug-hash="ALNbdy" data-default-tab="css,result" data-user="jeffersonmourak" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/jeffersonmourak/pen/ALNbdy/">Gooey Effect columns</a> by Jefferson Moura (<a href="http://codepen.io/jeffersonmourak">@jeffersonmourak</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<br />
+<br />
+Após isso você pode adicionar uma animação pra parecer realmente que a tinta está sendo derramada na sua página.</p>
+<p><img src="/images/paint-drop.gif" alt="Paint Drop Gif"></p>
+<p>This is all folks, Essa é o primeiro post sobre SVG Filters, em breve estarei voltando com mais artigos.
+Até mais 😀</p>
+
+
+			<foorter class="post-comments">
+				<h4>{ Comentários }</h4>
+				<div id="disqus_thread"></div>
+				<script>
+
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+				/*
+				var disqus_config = function () {
+				    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				    var d = document, s = d.createElement('script');
+				    s.src = '//css-brasil.disqus.com/embed.js';
+				    s.setAttribute('data-timestamp', +new Date());
+				    (d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</foorter>
+		</article>
+	</section>
+</div>
+
+
+</body>
+</html>
