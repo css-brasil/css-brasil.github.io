@@ -79,49 +79,33 @@
 					<img src="/images/paint-drop.png" alt="Paint Drop com Gooey Effect">
 
 				<figcaption class="btn-row">
-						<a href="http://jeffersonmourak.me/" class="btn positive">Exemplo</a>
 				</figcaption>
 			</figure>
 
-			<p>Recentemente estava lendo um artigo no CSS Tricks sobre um efeito criado pelo brasileiro Lucas Bebber chamado <em>Gooey Effect</em> no qual se utiliza um SVG filter para fazer parecer que os elementos que estão mais perto uns dos outros estão grudados. (<a href="https://css-tricks.com/gooey-effect/">https://css-tricks.com/gooey-effect/</a>) , e isso me deu uma inspiração para criar um outro efeito com base no <em>Gooey</em>.</p>
+			<h1 id="paint-drop-com-gooey-effect">Paint Drop com Gooey Effect</h1>
+<p>Recentemente estava lendo um artigo no CSS Tricks sobre um efeito criado pelo brasileiro Lucas Bebber chamado <em>Gooey Effect</em> no qual se utiliza um SVG filter para fazer parecer que os elementos que estão mais perto uns dos outros estão grudados. (<a href="https://css-tricks.com/gooey-effect/">https://css-tricks.com/gooey-effect/</a>) , e isso me deu uma inspiração para criar um outro efeito com base no <em>Gooey</em>.</p>
 <p>A ideia desse efeito é criar a intenção de que está caindo um balde de tinta em seu site.</p>
 <h2 id="estrutura">Estrutura</h2>
-<p>Para se criar o efeito, você precisa criar uma pequena estrutura de elementos, é bem simples.
-<br>
-<br></p>
+<p>Para se criar o efeito, você precisa criar uma pequena estrutura de elementos, é bem simples.</p>
 <pre><code>.wrapper
     ├── .column
     └── .content
-</code></pre><p><br>
-<br></p>
-<p>O <code>.wrapper</code> é o elemento no qual será adicionado o efeito principal.
-Note que a class tem white-space: nowrap e overflow-x: hidden, pra que o não exista espaços indevidos entre as colunas e também não apareça uma coluna extra caso a largura do seu elemento seja inferior ao das colunas.
-<br>
-<br></p>
+</code></pre><p>O <code>.wrapper</code> é o elemento no qual será adicionado o efeito principal.</p>
+<p>Note que a class tem white-space: nowrap e overflow-x: hidden, pra que o não exista espaços indevidos entre as colunas e também não apareça uma coluna extra caso a largura do seu elemento seja inferior ao das colunas.</p>
 <p><p data-height="265" data-theme-id="dark" data-slug-hash="pEGddP" data-default-tab="css,result" data-user="jeffersonmourak" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/jeffersonmourak/pen/pEGddP/">Gooey Effect wrapper</a> by Jefferson Moura (<a href="http://codepen.io/jeffersonmourak">@jeffersonmourak</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
-<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-<br />
-<br /></p>
-<p><p>O <code>.content</code> é o elemento que você adiciona caso queira ter algum conteúdo dentro do efeito, e assim você pode ter por exemplo o nome da sua aplicação ou a logo da sua empresa, fica ao seu critério as informações contidas no Content.</p>
-<br /></p>
-<p><p>Basicamente é um quadrado com a mesma cor das colunas.</p>
-<br />
-<br /></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>O <code>.content</code> é o elemento que você adiciona caso queira ter algum conteúdo dentro do efeito, e assim você pode ter por exemplo o nome da sua aplicação ou a logo da sua empresa, fica ao seu critério as informações contidas no Content.</p>
+<p>Basicamente é um quadrado com a mesma cor das colunas,</p>
 <p><p data-height="265" data-theme-id="dark" data-slug-hash="yakPpX" data-default-tab="css,result" data-user="jeffersonmourak" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/jeffersonmourak/pen/yakPpX/">Gooey Effect content</a> by Jefferson Moura (<a href="http://codepen.io/jeffersonmourak">@jeffersonmourak</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
-<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-<br />
-<br />
-As <code>.column</code> São os elementos que irão fazer as linhas da tinta, e assim ficar algo mais &quot;realista&quot;. Elas são divs com tamanho variado e com as bordas inferiores arredondadas.
-<br />
-<br /></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>As <code>.column</code> São os elementos que irão fazer as linhas da tinta, e assim ficar algo mais &quot;realista&quot;. Elas são divs com tamanho variado e com as bordas inferiores arredondadas.</p>
 <p><p data-height="265" data-theme-id="dark" data-slug-hash="ALNbdy" data-default-tab="css,result" data-user="jeffersonmourak" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/jeffersonmourak/pen/ALNbdy/">Gooey Effect columns</a> by Jefferson Moura (<a href="http://codepen.io/jeffersonmourak">@jeffersonmourak</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
-<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-<br />
-<br />
-Após isso você pode adicionar uma animação pra parecer realmente que a tinta está sendo derramada na sua página.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Após isso você pode adicionar uma animação pra parecer realmente que a tinta está sendo derramada na sua página.</p>
 <p><img src="/images/paint-drop.gif" alt="Paint Drop Gif"></p>
-<p>This is all folks, Essa é o primeiro post sobre SVG Filters, em breve estarei voltando com mais artigos.
-Até mais 😀</p>
 
 
 			<foorter class="post-comments">
