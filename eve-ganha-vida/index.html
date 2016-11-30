@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		CSS Brasil -
+
+
+			Eva ganha vida.
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="publisher" href="https://plus.google.com/u/0/107923948578708069647/posts"/>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content=" Eva ganha vida." />
+	<meta property="og:description" content="Nesse tutorial será mostrado como adicionar animações na ilustração, então nossa Eva ganhará vida." />
+	<meta property="og:site_name" content="CSS Brasil" />
+	<meta property="og:image" content="http://cssbrasil.org/images/eva.png" />
+	<meta name="twitter:image:src" content="http://cssbrasil.org/images/eva.png" />
+	<meta name="twitter:title" content=" Eva ganha vida."/>
+	<meta name="twitter:site" content="@Clovissneto"/>
+	<meta name="twitter:domain" content="CSS Brasil"/>
+
+	<meta name="description" content="Nesse tutorial será mostrado como adicionar animações na ilustração, então nossa Eva ganhará vida.">
+	<meta name="keywords" content="formas,animações" />
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400|Indie+Flower|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-59584480-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hide" id="navigation-action">
+	<a href="https://github.com/css-brasil/css-brasil">
+		<img class="github-fork-flag" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+	</a><script id="dsq-count-scr" src="//css-brasil.disqus.com/count.js" async></script>
+
+<div class="bg-positive">
+	<nav>
+		<label for="navigation-action" id="menu-ico">
+			<span class="btn-icon"></span>
+		</label>
+	
+		<ul id="navigation-list">
+			<li><a href="/playground"><i class="fa fa-html5" aria-hidden="true"></i> Playground</a></li>
+			<li><a href="/articles"><i class="fa fa-css3" aria-hidden="true"></i> Artigos</a></li>
+			<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+		</ul>
+	</nav>
+	
+</div>
+
+<div id="content">
+	<header class="header-site-title">
+		<a href="/articles"><h2 class="page-title positive">Artigos</h2></a>
+		<h3 class="page-title smoth-dark">Eva ganha vida.</h3>
+		<h1><a href="/" class="logo-ico"><img src="/images/css-brasil.png" class="static-logo" alt="CSS Brasil"></a></h1>
+	</header>
+
+	<section class="container-fluid post">
+		<header>
+			<p class="credits center-txt">Escrito em November 29, 2016</p>
+			<h3 class="post-description">Nesse tutorial será mostrado como adicionar animações na ilustração, então nossa Eva ganhará vida.</h3>
+		</header>
+
+		<article>
+			<figure class="wrapper">
+					<img src="/images/eva.png" alt="Eva ganha vida.">
+
+				<figcaption class="btn-row">
+						<a href="http://codepen.io/daliannyvieira/pen/gwvrvb" class="btn positive">Exemplo</a>
+				</figcaption>
+			</figure>
+
+			<p>Eva é uma robô meiga, fofa, maravilhosa, criada pela <a href="https://pt.wikipedia.org/wiki/WALL%C2%B7E">Pixar</a>. Como boa fã, da Pixar, e do CSS, criei uma fanart dela usando formas em CSS.
+Nesse tutorial será mostrado como adicionar animações na ilustração, então nossa Eva ganhará vida.</p>
+<p>Todos os exemplos dessa postagem estão disponíveis no <a href="http://codepen.io/collection/XmZvqo/">Codepen</a>.
+Você pode ler mais sobre animações no meu <a href="https://github.com/daliannyvieira/css-animations-pocket-guide">guia de bolso</a> ou em outras postagens aqui mesmo no blog.</p>
+<h2 id="montando-o-esqueleto-as-pe-as">Montando <del>o esqueleto</del> as peças</h2>
+<p>Eva foi montada com classes em HTML e formas geométricas estilizadas com CSS. O foco nesse tutorial é falar sobre as <strong>animações</strong>. Então vou assumir que você já sabe criar formas assim, mas se não souber ainda, você pode conferir outros posts sobre isso e aprender aqui.</p>
+<p><p data-height="400" data-theme-id="0" data-slug-hash="amqNZV" data-default-tab="css,result" data-user="daliannyvieira" data-embed-version="2" data-pen-title="Eva 00" class="codepen">See the Pen <a href="http://codepen.io/daliannyvieira/pen/amqNZV/">Eva 00</a> by Dalianny Vieira (<a href="http://codepen.io/daliannyvieira">@daliannyvieira</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="primeiros-passos-voos">Primeiros <del>passos</del> voos</h2>
+<p>Nossa Eva não foi construída com pés ou rodinhas. Ela precisa flutuar para voar por aí. Usando a propriedade <code>animation</code> vamos animar a classe responsável mostrar seu corpo.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/73de6a007ee4ec2311e9ee2406272c6f.js"></script>
+
+<p>O código acima diz ao navegador que queremos que nossa Eva ganhe uma animação chamada up, flutue em um espaço de tempo de 0.4segundos, de forma infinita (não queremos que ela pare, não é? hihi), usando a função de tempo ease-in-out, em direção alternate, fazendo com que ela entre em um looping bonitinho e contínuo.</p>
+<p>Cada animação precisa ser definida com um <code>@keyframe</code>, que diz <strong>quando</strong>, <strong>onde</strong> e <strong>como</strong> uma propriedade deve ser animada.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/e8ad28572d2218d8ab851a6bf7935bf9.js"></script>
+
+<p>Nosso código diz apenas que quando nossa animação chegar em 100% Eva deve se movimentar até o ponto -25px no eixo Y, em um <a href="http://brasilescola.uol.com.br/matematica/plano-cartesiano.htm]">plano cartesiano</a>, da página.  </p>
+<p>Agora Eva já flutua, mas para deixar a composição dela mais realista, precisamos modificar também sua sombra. Afinal, agora ela está se afastando do chão, e a sombra projetada sob ela precisa ser animada também. A animação shadow possui a mesma duração, iteração, função de tempo e direção da up.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/3111baf8a9456fc542daf78110e04bef.js"></script>
+
+<p>Mas agora, ela não se movimenta, apenas tem o tamanho de sua largura transformada, em uma escala de 1.2.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/925726a0eac0fc3a46ddc63dd299ad60.js"></script>
+
+<p><p data-height="400" data-theme-id="0" data-slug-hash="KgQrNN" data-default-tab="css,result" data-user="daliannyvieira" data-embed-version="2" data-pen-title="Eva 01" class="codepen">See the Pen <a href="http://codepen.io/daliannyvieira/pen/KgQrNN/">Eva 01</a> by Dalianny Vieira (<a href="http://codepen.io/daliannyvieira">@daliannyvieira</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="movimentando-os-bra-os">Movimentando os braços</h2>
+<p>A animação arm-left possui a mesma duração, iteração, função de tempo e direção da up e shadow.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/23b66f0151bb71574103374d74f83255.js"></script>
+
+<p>O @keyframe, por sua vez, diz ao navegador que a animação ao alcançar 100% de sua duração deve fazer a forma arm-left (braço esquerdo) girar em 25 graus.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/dd15f0172ee960c8a9cb0d9e92579190.js"></script>
+
+<p>A animação arm-right possui a mesma duração, iteração, função de tempo e direção da arm-left. Mas seu @keyframe diz que ela deve girar em -25 graus.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/a3ac2732b92d66c636854c2c880afea2.js"></script>
+
+<p><p data-height="400" data-theme-id="0" data-slug-hash="EgQykE" data-default-tab="css,result" data-user="daliannyvieira" data-embed-version="2" data-pen-title="Eva 02" class="codepen">See the Pen <a href="http://codepen.io/daliannyvieira/pen/EgQykE/">Eva 02</a> by Dalianny Vieira (<a href="http://codepen.io/daliannyvieira">@daliannyvieira</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="ganhando-emo-es">Ganhando emoções</h2>
+<p>Nossa Eva já consegue flutuar por aí, e mexer seus bracinhos. Mas ainda não parece sentir emoções. Para deixa-la mais empática, vamos adicionar animações também em seus olhos.</p>
+<p>A animação eye-left tem a mesma iteração, função de tempo e direção das anteriores, mas, sua duração é de 2 segundos.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/f4d90c56f5e2955a17a5cc77bcbb5a3d.js"></script>
+
+<p>E seu @keyframe diz que ela deve girar em -22 graus.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/88211b4edf368e8c462017ecc7652830.js"></script>
+
+<p>A animação eye-right tem a mesma duração, iteração, função de tempo e direção da eye-left.</p>
+<pre><code class="lang-css">.eye-right {
+  animation-name: eye-right;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+</code></pre>
+<p>Enquanto seu @keyframe, por sua vez, indica que ela deve girar em 22 graus.</p>
+<script src="https://gist.github.com/clovisdasilvaneto/d2e427f31754760a548deac3c7f8e7c0.js"></script>
+
+<p>Fim! Se você acompanhou esse post até aqui, muito obrigada!
+Você acompanhou uma robô fofinha ganhar vida! ♥ E uma geek se divertir muito no processo.</p>
+<p><p data-height="400" data-theme-id="0" data-slug-hash="gwvrvb" data-default-tab="css,result" data-user="daliannyvieira" data-embed-version="2" data-pen-title="Eva 03" class="codepen">See the Pen <a href="http://codepen.io/daliannyvieira/pen/gwvrvb/">Eva 03</a> by Dalianny Vieira (<a href="http://codepen.io/daliannyvieira">@daliannyvieira</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+			<foorter class="post-comments">
+				<h4>{ Comentários }</h4>
+				<div id="disqus_thread"></div>
+				<script>
+
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+				/*
+				var disqus_config = function () {
+				    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				    var d = document, s = d.createElement('script');
+				    s.src = '//css-brasil.disqus.com/embed.js';
+				    s.setAttribute('data-timestamp', +new Date());
+				    (d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</foorter>
+		</article>
+	</section>
+</div>
+
+
+</body>
+</html>
