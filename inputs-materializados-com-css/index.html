@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		CSS Brasil -
+
+
+			Inputs Materializados com CSS.
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="publisher" href="https://plus.google.com/u/0/107923948578708069647/posts"/>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content=" Inputs Materializados com CSS." />
+	<meta property="og:description" content="É possível validar dados com HTML e CSS?." />
+	<meta property="og:site_name" content="CSS Brasil" />
+	<meta property="og:image" content="http://cssbrasil.org/images/material-input-css.png" />
+	<meta name="twitter:image:src" content="http://cssbrasil.org/images/material-input-css.png" />
+	<meta name="twitter:title" content=" Inputs Materializados com CSS."/>
+	<meta name="twitter:site" content="@Clovissneto"/>
+	<meta name="twitter:domain" content="CSS Brasil"/>
+
+	<meta name="description" content="É possível validar dados com HTML e CSS?.">
+	<meta name="keywords" content="experimentos,animações" />
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400|Indie+Flower|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/main.css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-59584480-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="hide" id="navigation-action">
+	<a href="https://github.com/css-brasil/css-brasil">
+		<img class="github-fork-flag" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+	</a><script id="dsq-count-scr" src="//css-brasil.disqus.com/count.js" async></script>
+
+<div class="bg-positive">
+	<nav>
+		<label for="navigation-action" id="menu-ico">
+			<span class="btn-icon"></span>
+		</label>
+	
+		<ul id="navigation-list">
+			<li><a href="/playground"><i class="fa fa-html5" aria-hidden="true"></i> Playground</a></li>
+			<li><a href="/articles"><i class="fa fa-css3" aria-hidden="true"></i> Artigos</a></li>
+			<li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+		</ul>
+	</nav>
+	
+</div>
+
+<div id="content">
+	<header class="header-site-title">
+		<a href="/articles"><h2 class="page-title positive">Artigos</h2></a>
+		<h3 class="page-title smoth-dark">Inputs Materializados com CSS.</h3>
+		<h1><a href="/" class="logo-ico"><img src="/images/css-brasil.png" class="static-logo" alt="CSS Brasil"></a></h1>
+	</header>
+
+	<section class="container-fluid post">
+		<header>
+			<p class="credits center-txt">Escrito em December 21, 2016</p>
+			<h3 class="post-description">É possível validar dados com HTML e CSS?.</h3>
+		</header>
+
+		<article>
+			<figure class="wrapper">
+					<img src="/images/material-input-css.png" alt="Inputs Materializados com CSS.">
+
+				<figcaption class="btn-row">
+						<a href="https://codepen.io/soutomario/pen/LbENBr" class="btn positive">Exemplo</a>
+				</figcaption>
+			</figure>
+
+			<p>Depois de muita luta e vencer a faculdade, cá estou eu escrevendo meu primeiro post que dedico ao @afonsopacifer (pela insistência em me motivar a escrever). Bom eu sempre usei Android e acho muito mágico o que a galera faz nos aplicativos e como algumas animações violam o que eu considero como física do front-end.</p>
+<p>Boa parte dessas animações na web são facilmente feitas com JS…</p>
+<blockquote>
+<p>Ahhh, mas ai é fácil quero ver fazer diferente, ser pioneiro, inovador, senhor descolado.</p>
+</blockquote>
+<p>Cof cof, continuando… Sim é relativamente fácil fazer essas animações com JS e justamente por buscar uma outra alternativa eu resolvi fazer esse post. Então o desafio foi lançado: <strong>Como fazer um Material Input somente com CSS?</strong></p>
+<h2 id="primeiramente-fora-temer-">Primeiramente <del>(fora temer)</del></h2>
+<p>Os ingredientes necessários para essa receita serão: HTML5 Data Form Validations, Alguns seletores e lógica de CSS &lt;3, amor e pensar um pouco fora do padrão.</p>
+<p>Vale ressaltar que <strong>isso é um experimento</strong>, e que experimentos são uma fonte importante de conhecimento para lidar com problemas do dia-a-dia.</p>
+<h3 id="data-form-validations">Data Form Validations</h3>
+<p>Faz algum tempo que muitas pessoas utilizam o atributo <strong>required</strong> do HTML5 para fazer algumas validações simples em formulários como no exemplo abaixo:</p>
+<p><p data-height="265" data-theme-id="dark" data-slug-hash="bBzZXj" data-default-tab="html,result" data-user="soutomario" data-embed-version="2" data-pen-title="HTML5 Data Form Validations" class="codepen">See the Pen <a href="http://codepen.io/soutomario/pen/bBzZXj/">HTML5 Data Form Validations</a> by Mario Souto (<a href="http://codepen.io/soutomario">@soutomario</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>As validações com required são bem bacanas, pois elas pegam o [type] do input e tiram por base dele se o campo foi preenchido corretamente ou não, validando e-mails, texts e etc…</p>
+<p>Porém, uma coisa que pouca gente sabe é que é possível juntamente do required utilizar o atributo <strong>pattern</strong> que possibilita fazer validações complexas baseadas em expressões regulares sem o uso de JavaScript.</p>
+<p><img src="https://mariosouto.com/assets/img/im-god.gif" alt="WHERE IS YOUR GOD NOW?"></p>
+<blockquote>
+<p>WHERE IS YOUR GOD NOW?</p>
+</blockquote>
+<p>Calma que não para por ai, além de ser possível fazer validações no HTML é possível capturar o estado delas utilizando CSS com as Pseudo Classes <strong>valid</strong> e <strong>invalid</strong>, ou seja: <em>É possível estilizar um elemento, se baseando em tratamento de dados somente utilizando linguagens de marcação e estilo!</em></p>
+<h2 id="segundamente-m-os-a-obra-">Segundamente: Mãos a obra!</h2>
+<p>Dessa vez nosso objetivo não é o trapézio descendente e sim esse cara aqui: </p>
+<p><img src="https://mariosouto.com/assets/img/input-material-design.gif" alt="Exemplo de input do Material Design"></p>
+<p>Indo pelo passo a passo, vamos começar pela estrutura HTML que será bem simples:</p>
+<script src="https://gist.github.com/soutomario/8fc58a5149603e00d02288ebdeb2d509.js"></script>
+
+<p>1 - Uma tag section e uma form
+2 - Um input-container para agrupar o conjunto da label com o input
+3 - E por fim, um input com um id &quot;name&quot; e um label logo <em>abaixo</em>, com o <code>for=</code> referenciando para o id do input (a ordem nesse caso é bem importante e vocês já irão entender).</p>
+<p>Feito isso, o próximo passo é colocar nossa regex no atributo pattern deixando ele assim: <code>pattern=&quot;.+&quot;</code> (essa condição retorna válido caso qualquer caracter seja inserido dentro do input).</p>
+<p>Agora vem a parte do amor com CSS &lt;3</p>
+<h3 id="base">Base</h3>
+<script src="https://gist.github.com/soutomario/184bcff2e14c6e4a45e1b6e0cf7c7a65.js"></script>
+
+<p>A estrutura é bem simples, basicamente aplicamos um estilo no input para ele se parecer com o do Material Design e posicionamentos de forma absoluta o label a esquerda do input-container e centralizado em relação ao input.</p>
+<h3 id="intera-o">Interação</h3>
+<script src="https://gist.github.com/soutomario/302b568ba17d5a62c954ee997d70b98b.js"></script>
+
+<p>Aqui é onde acontece a mágica, nós validamos quando o input for valido no HTML e pelo CSS verificamos esse estado, adicionando um efeito ao label que é o elemento seguinte ao input.</p>
+<p>E para finalizar com um toque especial vamos dar um tapa no visual:</p>
+<script src="https://gist.github.com/soutomario/e3013895740025ea91715bbe643138fb.js"></script>
+
+<p>E finalmente aqui está o resultado do nosso experimento!</p>
+<p><p data-height="357" data-theme-id="dark" data-slug-hash="LbENBr" data-default-tab="html,result" data-user="soutomario" data-embed-version="2" data-pen-title="Material Design Input - CSS Pure" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/soutomario/pen/LbENBr/">Material Design Input - CSS Pure</a> by Mario Souto (<a href="http://codepen.io/soutomario">@soutomario</a>) on <a href="http://codepen.io">CodePen</a>.</p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Bom, espero que tenham gostado do post em breve trarei mais conteúdos, quaisquer dúvidas deixem nos comentários ou me chamem em alguma rede social!</p>
+<h2 id="refer-ncias-">Referências:</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:invalid">https://developer.mozilla.org/pt-BR/docs/Web/CSS/:invalid</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/:valid">https://developer.mozilla.org/pt-BR/docs/Web/CSS/:valid</a></li>
+<li><a href="http://materializecss.com/forms.html">http://materializecss.com/forms.html</a></li>
+</ul>
+
+
+			<foorter class="post-comments">
+				<h4>{ Comentários }</h4>
+				<div id="disqus_thread"></div>
+				<script>
+
+				/**
+				 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+				/*
+				var disqus_config = function () {
+				    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				    var d = document, s = d.createElement('script');
+				    s.src = '//css-brasil.disqus.com/embed.js';
+				    s.setAttribute('data-timestamp', +new Date());
+				    (d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</foorter>
+		</article>
+	</section>
+</div>
+
+
+</body>
+</html>
